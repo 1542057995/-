@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>我傻了</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="input-num">
+        <button @click="sub">
+          -
+        </button>
+        <span>{{ num }}</span>
+        <button @clcik="add">
+          +
+        </button>
+      </div>
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- built files will be auto injected -->
+  <script>
+var app = new Vue({
+  el:"#app",
+  data:{
+    num:1
+  },
+  methods:{
+    add:function(){
+      // console.log('add');
+      if(this.num<10){
+        this.num++;
+      }else{
+        alert('别点啦')
+      }
+    },
+    sub:function(){
+      // console.log('sub');
+      if(this.num>0){
+        this.num--;
+      }else{
+        alert('别点啦!')
+      }
+    }
+    },
+})
+  </script>
+  </body>
+</html>
